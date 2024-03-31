@@ -1,0 +1,23 @@
+<!-- employee_detail.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Employee Details</title>
+</head>
+<body>
+    <div class="card">
+        <div class="card-header">
+            Employee Details
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">{{ employee.name }}</h5>
+            <p class="card-text">{{ employee.designation }}</p>
+            {% if employee.photo %}
+                <img src="{{ employee.photo.url }}" alt="Employee Photo">
+            {% else %}
+                <p>No photo available</p>
+            {% endif %}
+        </div>
+    </div>
+</body>
+</html>
